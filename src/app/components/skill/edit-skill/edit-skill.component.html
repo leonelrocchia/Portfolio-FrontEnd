@@ -1,0 +1,29 @@
+<app-header></app-header>
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="margin-top: 10px;" *ngIf="skill">
+    <mat-card class="formulario">
+        <mat-card-title>Editar skill</mat-card-title>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Nombre de la skill</mat-label>
+            <input matInput type="text" class="form-control" id="skill" name="skill" [(ngModel)]="skill.skill" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Nivel de manejo del 1 al 100</mat-label>
+            <input matInput type="number" class="form-control" id="nivel" name="nivel" [(ngModel)]="skill.nivel"
+                required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>URL del logo</mat-label>
+            <input matInput type="text" class="form-control" id="img" name="img" [(ngModel)]="skill.img" required>
+        </mat-form-field>
+        <br>
+        <mat-card-actions class="botones">
+            <button class="mat-raised-button" routerLink="/home">Volver</button>
+            <button class="mat-raised-button mat-primary" style="margin-left: 10px;">Guardar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+
+<app-footer></app-footer>

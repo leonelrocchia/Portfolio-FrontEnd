@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <span>Experiencias Laborales</span>
+  <span class="example-spacer"></span>
+  <button mat-mini-fab matTooltip="Agregar" color="accent" routerLink="newExperience" *ngIf="isLogged">
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-grid-list cols="3" rowHeight="300px">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let experience of experiences">
+    <div class="container">
+      <mat-card class="material-card">
+        <mat-card-actions class="edButtons">
+          <button mat-icon-button routerLink="editExperience/{{experience.id}}" color="primary" matTooltip="Editar"
+            *ngIf="isLogged">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteExperience(experience.id)" color="warn" matTooltip="Eliminar"
+            *ngIf="isLogged">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+        <mat-card-title class="titleCard">{{experience.puesto}}</mat-card-title>
+        <mat-card-subtitle class="subtitleCard"><b>{{experience.empleador}}</b></mat-card-subtitle>
+        <mat-divider inset style="margin-bottom: 10px;"></mat-divider>
+        <mat-card-title-group>
+          <mat-card-subtitle>{{experience.descripcion}}</mat-card-subtitle>
+          <img mat-card-sm-image src="{{experience.img}}">
+        </mat-card-title-group>
+        <mat-card-content>
+          <p>Desde {{experience.inicio}} hasta {{experience.fin}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

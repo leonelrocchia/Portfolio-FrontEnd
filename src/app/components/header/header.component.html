@@ -1,0 +1,19 @@
+<mat-toolbar color="secondary" class="toolbar">
+  <a
+    href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa">
+    <img src="../../../assets/Images/logoAP.png" alt="Argentina Programa" class="logoAp"
+      matTooltip="Página oficial del Argentina Programa"></a>
+  <span>#YoProgramo</span>
+  <span class="example-spacer"></span>
+  <span routerLink="home" matTooltip="Home">Porfolio</span>
+  <span class="example-spacer"></span>
+  <app-redes></app-redes>
+  <div class="loginButton">
+    <button mat-mini-fab matTooltip="Login" color="accent" routerLink="login" *ngIf="!isLogged">
+      <mat-icon color="secondary">login</mat-icon>
+    </button>
+    <button mat-mini-fab matTooltip="Logout" color="primary" routerLink="home" *ngIf="isLogged" (click)="onLogOut()">
+      <mat-icon color="secondary">logout</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

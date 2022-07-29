@@ -1,0 +1,22 @@
+.logoAp{
+    display: flex;
+    width: 120px;
+    margin-right: 20px;
+}
+
+h1{
+    color: black;
+}
+
+.AP{
+    display: flex;
+    height: justify ;
+}
+
+app-redes{
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+}

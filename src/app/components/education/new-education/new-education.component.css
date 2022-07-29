@@ -1,0 +1,14 @@
+.input {
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.mat-raised-button {
+    align-items: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.onClose {
+    align-items: right;
+}

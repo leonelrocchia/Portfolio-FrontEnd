@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <span>Proyectos</span>
+  <span class="example-spacer"></span>
+    <button mat-mini-fab matTooltip="Agregar" color="accent" routerLink="newProject" *ngIf="isLogged">
+      <mat-icon>add</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-grid-list cols="4" rowHeight="400px">
+  <mat-grid-tile [colspan]="2" [rowspan]="1" *ngFor="let project of projects" class="project-card">
+    <mat-card class="container">
+      <mat-card-actions class="edButtons">
+        <button mat-icon-button routerLink="editProject/{{project.id}}" color="primary" matTooltip="Editar"
+          *ngIf="isLogged">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteProject(project.id)" color="warn" matTooltip="Eliminar" *ngIf="isLogged">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+      <mat-card-title class="titleCard">{{project.proyecto}}</mat-card-title>
+      <mat-card-subtitle class="subtitleCard"><b>{{project.cliente}}</b></mat-card-subtitle>
+      <mat-divider inset style="margin-bottom: 10px;"></mat-divider>
+      <mat-card-title-group>
+        <mat-card-subtitle>{{project.descripcion}}</mat-card-subtitle>
+        <mat-card-subtitle>{{project.year}}</mat-card-subtitle>
+        <img mat-card-xl-image src="{{project.img}}">
+      </mat-card-title-group>
+      <mat-card-actions>
+        <a href="{{project.link}}"><button mat-button>Visitar <mat-icon matTooltip="Visitar">
+              launch</mat-icon></button></a>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<br>

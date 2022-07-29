@@ -1,0 +1,18 @@
+.sk-h2 {
+    text-align: center;
+  }
+  
+  .sk-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .sk-margin {
+    margin: 0 10px;
+  }
+

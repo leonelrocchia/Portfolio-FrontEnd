@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <span>Habilidades</span>
+  <span class="example-spacer"></span>
+    <button mat-mini-fab matTooltip="Agregar" color="accent" routerLink="newSkill" *ngIf="isLogged">
+      <mat-icon>add</mat-icon>
+    </button>
+</mat-toolbar>
+<br>
+<mat-grid-list cols="5" rowHeight="300px" class="sk-section">
+  <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let skill of skills">
+    <mat-card>
+      <mat-card-content>
+        <h2 class="sk-h2">{{skill.skill}}
+          <br>
+          <img src="{{skill.img}}" alt="" height="50px">
+        </h2>
+        <mat-progress-spinner class="sk-margin" [mode]="'determinate'" [value]="skill.nivel">
+        </mat-progress-spinner>
+        <mat-card-actions class="edButtons">
+          <button mat-icon-button routerLink="editSkill/{{skill.id}}" color="primary" matTooltip="Editar"
+            *ngIf="isLogged">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteSkill(skill.id)" color="warn" matTooltip="Eliminar" *ngIf="isLogged">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="margin-top: 10px;" *ngIf="education">
+    <mat-card class="formulario">
+        <mat-card-title>Editar registro educativo</mat-card-title>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Título</mat-label>
+            <input matInput type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="education.titulo"
+                required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Institución educativa</mat-label>
+            <input matInput type="text" class="form-control" id="institucion" name="institucion"
+                [(ngModel)]="education.institucion" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput type="text" class="form-control" id="descripcion" name="descripcion"
+                [(ngModel)]="education.descripcion" required></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>URL del logo</mat-label>
+            <input matInput type="text" class="form-control" id="img" name="img" [(ngModel)]="education.img" required>
+        </mat-form-field>
+        <br> 
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Año de inicio</mat-label>
+            <input matInput type="number" class="form-control" id="inicio" name="inicio" [(ngModel)]="education.inicio"
+                required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Año de finalización</mat-label>
+            <input matInput type="number" class="form-control" id="fin" name="fin" [(ngModel)]="education.fin">
+        </mat-form-field>
+        <br>
+        <mat-card-actions class="botones">
+            <button class="mat-raised-button" routerLink="/home">Volver</button>
+            <button class="mat-raised-button mat-primary" style="margin-left: 10px;">Guardar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+
+<app-footer></app-footer>

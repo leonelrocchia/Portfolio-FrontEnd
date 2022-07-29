@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <span>Educación</span>
+  <span class="example-spacer"></span>
+  <button mat-mini-fab matTooltip="Agregar" color="accent" routerLink="newEducation" *ngIf="isLogged">
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-grid-list cols="3" rowHeight="300px">
+  <mat-grid-tile [colspan]="1" rowspan="1" *ngFor="let education of educations">
+    <div class="container">
+      <mat-card class="material-card">
+        <mat-card-actions class="edButtons">
+          <button mat-icon-button routerLink="editEducation/{{education.id}}" color="primary" matTooltip="Editar"
+            *ngIf="isLogged">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteEducation(education.id)" color="warn" matTooltip="Eliminar"
+            *ngIf="isLogged">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+        <mat-card-title class="titleCard">{{education.titulo}}</mat-card-title>
+        <mat-card-subtitle class="subtitleCard"><b>{{education.institucion}}</b></mat-card-subtitle>
+        <mat-divider inset style="margin-bottom: 10px;"></mat-divider>
+        <mat-card-title-group>
+          <mat-card-subtitle> {{education.descripcion}}</mat-card-subtitle>
+          <img mat-card-sm-image class="img-card" src="{{education.img}}">
+        </mat-card-title-group>
+        <mat-card-content>
+          <p>Desde {{education.inicio}} hasta {{education.fin}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

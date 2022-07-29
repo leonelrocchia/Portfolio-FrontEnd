@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="body">
+  <mat-card class="login">
+    <h1>Iniciar sesión</h1>
+    <br>
+    <img src="../../../assets/Images/user.png" width="250" height="250" alt="">
+    <br>
+    <br>
+    <br>
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+      <mat-form-field class="ancho" appearance="fill">
+        <input matInput autocomplete="off" type="email" id="username" name="username" [(ngModel)]="username" required>
+        <mat-label class="form-label" for="username">Usuario</mat-label>
+      </mat-form-field>
+
+      <mat-form-field class="ancho" appearance="fill">
+        <input matInput autocomplete="off" type="password" id="password" name="password" [(ngModel)]="password"
+          required>
+        <mat-label class="form-label" for="password">Contraseña</mat-label>
+      </mat-form-field>
+      <br>
+      <br>
+      <br>
+      <button class="ancho button" mat-raised-button color="primary" [disabled]="!f.valid">
+        <mat-icon>login</mat-icon> Iniciar sesión
+      </button>
+    </form>
+  </mat-card>
+</div>

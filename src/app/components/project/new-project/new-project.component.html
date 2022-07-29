@@ -1,0 +1,43 @@
+<app-header></app-header>
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm" style="margin-top: 10px;" class="formulario">
+    <mat-card class="formulario">
+        <mat-card-title>Agregar nuevo proyecto</mat-card-title>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Nombre del proyecto</mat-label>
+            <input matInput type="text" class="form-control" id="proyecto" name="proyecto" [(ngModel)]="proyecto"
+                required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Cliente</mat-label>
+            <input matInput type="text" class="form-control" id="cliente" name="cliente" [(ngModel)]="cliente" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Descripción</mat-label>
+            <textarea matInput type="text" class="form-control" id="descripcion" name="descripcion"
+                [(ngModel)]="descripcion" required></textarea>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>URL del logo</mat-label>
+            <input matInput type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Año del proyecto</mat-label>
+            <input matInput type="number" class="form-control" id="year" name="year" [(ngModel)]="year" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="ancho">
+            <mat-label>Link del proyecto</mat-label>
+            <input matInput type="text" class="form-control" id="link" name="link" [(ngModel)]="link">
+        </mat-form-field>
+        <br>
+        <mat-card-actions class="botones">
+            <button class="mat-raised-button" routerLink="/home">Volver</button>
+            <button class="mat-raised-button mat-primary" style="margin-left: 10px;">Agregar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+<app-footer></app-footer>

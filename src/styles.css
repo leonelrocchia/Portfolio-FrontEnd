@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 90%;
+  max-width: auto;
+  min-width: 600px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #c6efff;
+}
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.ancho {
+  justify-content: center;
+  width: 80%;
+  background-color: white;
+}
+
+.form {
+  height: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  width: 90%;
+  background-color: white;
+}
+
+.button {
+  height: 50px;
+  align-items: right;
+  justify-content: right;
+}
+
+.addButton {
+  display: flex;
+  justify-content: right;
+  width: 120px;
+}
+
+.edButtons {
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
+
+.imgRight {
+  height: 60px;
+  align-items: right;
+  margin-right: 5px;
+}
+
+.mat-raised-button {
+  display: flex;
+  justify-content: right;
+  flex-wrap: wrap;
+}
+
+.pointer {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  padding: 10%;
+  margin-left: 30px;
+}
+
+.material-card {
+  display: flex;
+  max-width: auto;
+  max-height: 300px;
+  min-width: auto;
+  min-height: 200px;
+  padding: 10px;
+}
+
+
+.project-card {
+  display: flex;
+  justify-content: center;
+  min-width: flex;
+  min-height: 280px;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+.titleCard {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subtitleCard {
+  padding-left: 5px;
+}
+
+.toolbar {
+  display: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-form {
+  margin-top: 20px;
+  margin-left: 250px;
+  margin-right: 250px;
+  width: 800px;
+}
+
+.form {
+  width: 500px;
+  align-items: center;
+  width: flex;
+  padding: 5px;
+  background-color: rgb(203, 234, 255);
+}
+
+.form-control {
+  padding: 5px;
+  margin-right: 5px;
+  width: 500px;
+}
+
+.login {
+  justify-content: flex;
+  max-height: 500px;
+  margin-bottom: 100px;
+}
+
+.formDate {
+  align-items: center;
+  width: 250px;
+  padding: 25px;
+  background-color: rgb(203, 234, 255);
+}
+
+
+.formulario {
+  padding: 20px;
+  max-width: 800px;
+  width: flex;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.botones {
+  float: right;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
