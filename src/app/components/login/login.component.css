@@ -2,6 +2,15 @@
     width: 100%;
     max-width: 330px;
     text-align: center;
+    background-image: url(../../../assets/Images/fondo.jpg);
+}
+
+h1{
+    color: white;
+}
+
+.loginimg{
+    border-radius: 100%;
 }
 
 .spinner {

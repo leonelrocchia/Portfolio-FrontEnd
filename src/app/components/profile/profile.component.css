@@ -4,12 +4,12 @@ img {
     border-radius: 100%;
     display: flex;
     width: 100%;
-    height: auto;
+    height: flex;
     max-width: max-content;
 }
 
 .acercade {
-    background-color: #327f9e;
+    background-color: #2d96c077;
     padding: 10px;
     margin-left: 50px;
     margin-right: 50px;
