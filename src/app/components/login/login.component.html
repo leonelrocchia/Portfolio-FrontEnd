@@ -3,17 +3,17 @@
   <mat-card class="login">
     <h1><b>Iniciar sesión</b></h1>
     <br>
-    <img src="../../../assets/Images/etdli2.jpg" width="250" height="250" class="loginimg">
+    <img src="../../../assets/Images/user.png" width="250" height="250" class="loginimg">
     <br>
     <br>
     <br>
     <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-      <mat-form-field class="ancho-form" appearance="fill">
+      <mat-form-field class="ancho-form" appearance="fill" color="accent">
         <input matInput autocomplete="off" type="email" id="username" name="username" [(ngModel)]="username" required>
         <mat-label class="form-label" for="username">Usuario</mat-label>
       </mat-form-field>
 
-      <mat-form-field class="ancho-form" appearance="fill">
+      <mat-form-field class="ancho-form" appearance="fill"  color="accent">
         <input matInput autocomplete="off" type="password" id="password" name="password" [(ngModel)]="password"
           required>
         <mat-label class="form-label" for="password">Contraseña</mat-label>
